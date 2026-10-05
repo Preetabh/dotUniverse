@@ -17,7 +17,6 @@ export const NAV_LINKS: NavItem[] = [
     name: "Services",
     href: "#services",
     dropdown: [
-      { name: "All Services", href: "#services", description: "Explore full digital ecosystem" },
       { name: "Website Development", href: "/web-development", trending: true, description: "Custom Next.js & React web platforms" },
       { name: "App Development", href: "/app-development", trending: true, description: "Bespoke iOS, Android & Cross-platform apps" },
       { name: "Digital Marketing", href: "/digital-marketing", trending: true, description: "SEO, Performance marketing & paid ads" },
