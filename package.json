@@ -1,0 +1,24 @@
+{
+  "name": "dotuniverse",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CodexConquer Homepage Clone (React + Vite + Tailwind CSS) with Node/Express/MongoDB Backend",
+  "scripts": {
+    "frontend:dev": "npm --prefix frontend run dev",
+    "frontend:build": "npm --prefix frontend run build",
+    "frontend:preview": "npm --prefix frontend run preview",
+    "backend:dev": "npm --prefix backend run dev",
+    "backend:start": "npm --prefix backend start",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend"
+  },
+  "keywords": [
+    "codexconquer",
+    "react",
+    "vite",
+    "tailwindcss",
+    "express",
+    "mongodb"
+  ],
+  "author": "",
+  "license": "ISC"
+}
