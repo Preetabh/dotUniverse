@@ -8,9 +8,9 @@ import { ExperienceSection } from '../../components/Sections/ExperienceSection';
 import { ExpertsServicesSection } from '../../components/Sections/ExpertsServicesSection';
 import { PortfolioSection } from '../../components/Sections/PortfolioSection';
 import { TestimonialsSection } from '../../components/Sections/TestimonialsSection';
-import { PricingSection } from '../../components/Sections/PricingSection';
+import { CareersSection } from '../../components/Sections/CareersSection';
 import { TeamSection } from '../../components/Sections/TeamSection';
-import { CTASection } from '../../components/Sections/CTASection';
+import { ContactSection } from '../../components/Sections/ContactSection';
 import { Footer } from '../../components/Footer/Footer';
 import { Preloader } from '../../components/Loader/Preloader';
 import { useCurrencyPricing } from '../../hooks/useCurrencyPricing';
@@ -49,23 +49,20 @@ export const Home: React.FC = () => {
         {/* 6. Specialist Standards / Pillars */}
         <ExpertsServicesSection />
 
-        {/* 7. Live Project Portfolio Carousel */}
+        {/* 7. Live Project Portfolio & Portals Showcase */}
         <PortfolioSection />
 
         {/* 8. Client Reviews & Verified Results */}
         <TestimonialsSection />
 
-        {/* 9. Investment & Multi-Currency Pricing */}
-        <PricingSection
-          currentCurrency={currency}
-          onCurrencyChange={setCurrency}
-        />
+        {/* 9. Join The Builder Guild • Careers Section */}
+        <CareersSection />
 
         {/* 10. Leadership Team */}
         <TeamSection />
 
-        {/* 11. Conversion CTA Banner */}
-        <CTASection />
+        {/* 11. Direct Founder Gateway & Interactive Proposal • Contact Section */}
+        <ContactSection />
       </main>
 
       {/* Footer */}
