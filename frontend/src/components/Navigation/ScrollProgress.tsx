@@ -6,13 +6,20 @@ export const ScrollProgress: React.FC = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalScroll > 0) {
-        const currentProgress = (window.scrollY / totalScroll) * 100;
-        setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+          if (totalScroll > 0) {
+            const currentProgress = (window.scrollY / totalScroll) * 100;
+            setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
+          }
+          setShowScrollTop(window.scrollY > 300);
+          ticking = false;
+        });
+        ticking = true;
       }
-      setShowScrollTop(window.scrollY > 300);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -30,11 +37,11 @@ export const ScrollProgress: React.FC = () => {
 
   return (
     <>
-      {/* Top Laser Scroll Progress Bar */}
+      {/* Top Laser Scroll Progress Bar (100% GPU Hardware Accelerated) */}
       <div className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-transparent pointer-events-none">
         <div
-          className="h-full bg-gradient-to-r from-[#c8ff00] via-[#00f0ff] to-[#ec4899] transition-[width] duration-150 ease-out shadow-[0_0_12px_rgba(0,240,255,0.8),0_0_6px_rgba(200,255,0,0.6)]"
-          style={{ width: `${scrollProgress}%` }}
+          className="h-full w-full bg-gradient-to-r from-[#c8ff00] via-[#00f0ff] to-[#ec4899] origin-left will-change-transform shadow-[0_0_8px_rgba(0,240,255,0.6)]"
+          style={{ transform: `scaleX(${scrollProgress / 100})` }}
         />
       </div>
 

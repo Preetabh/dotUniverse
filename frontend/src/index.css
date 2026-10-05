@@ -279,14 +279,17 @@ body {
 
 .animate-cosmic-orbit {
   animation: cosmic-orbit 40s linear infinite;
+  will-change: transform;
 }
 
 .animate-cosmic-orbit-reverse {
   animation: cosmic-orbit-reverse 60s linear infinite;
+  will-change: transform;
 }
 
 .animate-aurora-pulse {
   animation: aurora-pulse 16s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .animate-stardust {
