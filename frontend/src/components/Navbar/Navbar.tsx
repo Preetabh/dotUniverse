@@ -12,6 +12,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ currentCurrency, onCurrencyChange }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(true);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
   const [currentPath, setCurrentPath] = useState(() => {
@@ -292,10 +293,67 @@ export const Navbar: React.FC<NavbarProps> = ({ currentCurrency, onCurrencyChang
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-[70px] bg-black/95 backdrop-blur-2xl border-b border-white/15 p-6 animate-in slide-in-from-top duration-300">
+        <div className="md:hidden fixed inset-x-0 top-[70px] bg-black/95 backdrop-blur-2xl border-b border-white/15 p-5 animate-in slide-in-from-top duration-300 max-h-[calc(100vh-70px)] overflow-y-auto z-50">
           <div className="flex flex-col gap-2">
             {NAV_LINKS.map((link) => {
-              const active = isLinkActive(link.href, !!link.dropdown);
+              if (link.dropdown) {
+                return (
+                  <div key={link.name} className="flex flex-col rounded-xl overflow-hidden border border-white/10 bg-white/[0.03]">
+                    <button
+                      type="button"
+                      onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                      className="text-base font-semibold py-2.5 px-3 flex items-center justify-between text-white hover:text-[#c8ff00] transition-colors cursor-pointer w-full text-left"
+                    >
+                      <span className="flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-[#c8ff00]" />
+                        <span>{link.name}</span>
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#c8ff00]/15 text-[#c8ff00] border border-[#c8ff00]/30 font-bold">
+                          {link.dropdown.length}
+                        </span>
+                      </span>
+                      <ChevronDown
+                        className={`w-4 h-4 text-white/60 transition-transform duration-200 ${
+                          mobileServicesOpen ? 'rotate-180 text-[#c8ff00]' : ''
+                        }`}
+                      />
+                    </button>
+
+                    {mobileServicesOpen && (
+                      <div className="flex flex-col gap-1 pb-2 px-2 border-t border-white/5 pt-1.5 bg-black/40">
+                        {link.dropdown.map((subItem) => {
+                          const isSubItemActive = currentPath === subItem.href;
+                          return (
+                            <a
+                              key={subItem.name}
+                              href={subItem.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`flex items-center justify-between p-2.5 rounded-lg text-sm transition-colors ${
+                                isSubItemActive
+                                  ? 'bg-[#c8ff00] text-black font-bold shadow-md'
+                                  : 'text-white/80 hover:text-white hover:bg-white/10'
+                              }`}
+                            >
+                              <div className="flex items-center gap-2.5">
+                                <span className={`w-1.5 h-1.5 rounded-full ${isSubItemActive ? 'bg-black' : 'bg-[#c8ff00]'}`} />
+                                <span className="font-medium">{subItem.name}</span>
+                              </div>
+                              {subItem.trending ? (
+                                <span className={`text-[9px] uppercase font-bold px-1.5 py-0.5 rounded ${isSubItemActive ? 'bg-black text-[#c8ff00]' : 'bg-[#ff005e]/20 text-[#ff005e] border border-[#ff005e]/30'}`}>
+                                  Hot
+                                </span>
+                              ) : (
+                                <ArrowRight className={`w-3.5 h-3.5 ${isSubItemActive ? 'text-black' : 'text-white/30'}`} />
+                              )}
+                            </a>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              const active = isLinkActive(link.href, false);
               return (
                 <a
                   key={link.name}
