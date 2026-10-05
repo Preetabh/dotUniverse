@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Home } from './pages/Home/Home';
 import { WebDevelopment } from './pages/WebDevelopment/WebDevelopment';
 import { AppDevelopment } from './pages/AppDevelopment/AppDevelopment';
+import { DigitalMarketing } from './pages/DigitalMarketing/DigitalMarketing';
+import { OnlineCourses } from './pages/OnlineCourses/OnlineCourses';
 
 export const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -48,6 +50,8 @@ export const App: React.FC = () => {
   const renderCurrentPage = () => {
     if (currentPath === '/web-development') return <WebDevelopment />;
     if (currentPath === '/app-development') return <AppDevelopment />;
+    if (currentPath === '/digital-marketing') return <DigitalMarketing />;
+    if (currentPath === '/online-courses') return <OnlineCourses />;
     return <Home />;
   };
 
@@ -89,7 +93,29 @@ export const App: React.FC = () => {
               : 'text-[#F5D061]/80 hover:text-[#F5D061]'
           }`}
         >
-          App Dev (Luxury)
+          App Dev
+        </button>
+        <button
+          type="button"
+          onClick={() => navigateTo('/digital-marketing')}
+          className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+            currentPath === '/digital-marketing'
+              ? 'bg-gradient-to-r from-[#ec4899] to-[#a855f7] text-white shadow-[0_0_15px_rgba(236,72,153,0.4)]'
+              : 'text-[#f472b6]/80 hover:text-[#f472b6]'
+          }`}
+        >
+          Growth Marketing
+        </button>
+        <button
+          type="button"
+          onClick={() => navigateTo('/online-courses')}
+          className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+            currentPath === '/online-courses'
+              ? 'bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] text-black shadow-[0_0_15px_rgba(245,158,11,0.4)]'
+              : 'text-[#fbbf24]/80 hover:text-[#fbbf24]'
+          }`}
+        >
+          Academy (Courses)
         </button>
       </div>
     </>

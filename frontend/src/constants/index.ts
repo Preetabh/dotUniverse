@@ -20,9 +20,9 @@ export const NAV_LINKS: NavItem[] = [
       { name: "All Services", href: "#services", description: "Explore full digital ecosystem" },
       { name: "Website Development", href: "/web-development", trending: true, description: "Custom Next.js & React web platforms" },
       { name: "App Development", href: "/app-development", trending: true, description: "Bespoke iOS, Android & Cross-platform apps" },
-      { name: "Digital Marketing", href: "#services", trending: true, description: "SEO, Performance marketing & paid ads" },
+      { name: "Digital Marketing", href: "/digital-marketing", trending: true, description: "SEO, Performance marketing & paid ads" },
       { name: "DesignX (Brand & UI/UX)", href: "#services", trending: true, description: "Conversion-optimized product design" },
-      { name: "Online Courses", href: "#services", description: "Practical mastery in tech & digital marketing" },
+      { name: "Online Courses", href: "/online-courses", trending: true, description: "Practical mastery in tech & digital marketing" },
       { name: "AI Solutions", href: "#services", description: "Workflow automation and smart chatbots" },
     ],
   },
@@ -305,19 +305,19 @@ export const PRICING_PLANS = [
 
 export const TEAM_MEMBERS = [
   {
-    name: "ALI AHMED",
-    role: "CO-FOUNDER & STRATEGIST",
+    name: "Vishu Awasthi",
+    role: "FOUNDER & STRATEGIST",
     bio: "Visionary behind dotUniverse. Ali drives company strategy, culture, and high-velocity digital execution with an obsessive passion for building brands that dominate.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80",
-    linkedin: "https://www.linkedin.com/in/aliahmedsiddiq/",
+    image: "",
+    linkedin: "https://www.linkedin.com/in/#/",
     accent: "#c8ff00"
   },
   {
-    name: "PRIYANSHU SAROGI",
-    role: "VIDEOGRAPHER & CONTENT LEAD",
+    name: "Sardar Japnam Singh Lal",
+    role: "CO-FOUNDER",
     bio: "The visual storyteller. Priyanshu has directed and produced high-retention content for 20+ brands across lifestyle, tech, and retail, averaging 500K+ organic views.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
-    linkedin: "https://www.linkedin.com/in/priyanshu-saraogi-7816b1323/",
+    linkedin: "https://www.linkedin.com/in/#/",
     accent: "#ff005e"
   },
 ];

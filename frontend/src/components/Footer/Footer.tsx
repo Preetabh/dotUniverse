@@ -16,12 +16,12 @@ export const Footer: React.FC = () => {
   ];
 
   const serviceLinks = [
-    { name: "Website Development", href: "#services" },
-    { name: "Mobile App Development", href: "#services" },
-    { name: "Digital Growth Marketing", href: "#services" },
+    { name: "Website Development", href: "/web-development" },
+    { name: "Mobile App Development", href: "/app-development" },
+    { name: "Digital Growth Marketing", href: "/digital-marketing" },
     { name: "DesignX (UI/UX & Brand)", href: "#services" },
     { name: "AI Solutions & Bots", href: "#services" },
-    { name: "dotUniverse Academy", href: "#services" },
+    { name: "dotUniverse Academy", href: "/online-courses" },
   ];
 
   const companyLinks = [

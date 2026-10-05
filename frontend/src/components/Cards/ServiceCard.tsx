@@ -17,6 +17,14 @@ interface ServiceCardProps {
 }
 
 export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+  const getServiceLink = () => {
+    if (service.id === 'web-dev') return '/web-development';
+    if (service.id === 'app-dev') return '/app-development';
+    if (service.id === 'digital-marketing') return '/digital-marketing';
+    if (service.id === 'online-courses') return '/online-courses';
+    return '#pricing';
+  };
+
   return (
     <div className="group relative flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.02] p-6 lg:p-8 backdrop-blur-xl transition-all duration-500 hover:border-white/30 hover:bg-white/[0.05] hover:-translate-y-2 overflow-hidden shadow-xl">
       {/* Accent Background Glow on Hover */}
@@ -84,10 +92,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       {/* Bottom CTA Link */}
       <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
         <a
-          href="#pricing"
+          href={getServiceLink()}
           className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-[#c8ff00] transition-colors"
         >
-          <span>Get Started</span>
+          <span>Explore Service</span>
           <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </a>
         <span className="text-xs text-white/40">Custom SLA</span>
