@@ -1,108 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CTAButton } from '../Buttons/CTAButton';
 import { ArrowRight, Sparkles, CheckCircle2, Code2, Rocket, TrendingUp, Smartphone } from 'lucide-react';
 
-const CELESTIAL_STARS = [
-  { top: "12%", left: "15%", size: 2, delay: "0s", color: "#c8ff00" },
-  { top: "22%", left: "82%", size: 1.5, delay: "1.2s", color: "#00f0ff" },
-  { top: "35%", left: "8%", size: 2.5, delay: "2.5s", color: "#ffffff" },
-  { top: "18%", left: "45%", size: 1, delay: "0.7s", color: "#c8ff00" },
-  { top: "42%", left: "92%", size: 2, delay: "1.9s", color: "#ec4899" },
-  { top: "68%", left: "12%", size: 1.5, delay: "3.1s", color: "#00f0ff" },
-  { top: "75%", left: "88%", size: 2, delay: "0.4s", color: "#c8ff00" },
-  { top: "82%", left: "28%", size: 1, delay: "2.1s", color: "#ffffff" },
-  { top: "28%", left: "68%", size: 2, delay: "1.5s", color: "#c8ff00" },
-  { top: "55%", left: "5%", size: 1.5, delay: "2.8s", color: "#00f0ff" },
-  { top: "14%", left: "90%", size: 2, delay: "3.5s", color: "#ffffff" },
-  { top: "62%", left: "76%", size: 2.5, delay: "0.9s", color: "#a855f7" },
-  { top: "48%", left: "18%", size: 1, delay: "1.7s", color: "#c8ff00" },
-  { top: "88%", left: "62%", size: 1.5, delay: "2.4s", color: "#00f0ff" },
-  { top: "8%", left: "32%", size: 2, delay: "3.0s", color: "#ffffff" },
-  { top: "92%", left: "42%", size: 1.5, delay: "0.2s", color: "#c8ff00" },
-  { top: "38%", left: "35%", size: 1, delay: "1.4s", color: "#a855f7" },
-  { top: "58%", left: "95%", size: 2, delay: "2.2s", color: "#00f0ff" },
-  { top: "25%", left: "22%", size: 1.5, delay: "1.8s", color: "#c8ff00" },
-  { top: "70%", left: "48%", size: 1.5, delay: "2.7s", color: "#ffffff" },
-];
-
 export const CodexHero: React.FC = () => {
-  const [mousePos, setMousePos] = useState({ x: 50, y: 35 });
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    setMousePos({ x, y });
-  };
 
   return (
     <section
       id="hero"
-      onMouseMove={handleMouseMove}
-      className="relative min-h-screen pt-36 pb-24 flex flex-col justify-center items-center text-center overflow-hidden bg-[#050508]"
+      className="relative min-h-screen pt-36 pb-24 flex flex-col justify-center items-center text-center overflow-hidden bg-[#070709]"
     >
       {/* ==============================================================
-          CLASSY COSMIC BACKGROUND SYSTEM (z-0 to ensure 100% visibility)
+          LIGHTWEIGHT & CLASSY COSMIC BACKGROUND (Optimized for all PCs)
          ============================================================== */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden select-none">
-        {/* 1. Interactive Cursor Light Spotlight */}
-        <div
-          className="absolute inset-0 transition-opacity duration-500"
-          style={{
-            background: `radial-gradient(800px circle at ${mousePos.x}% ${mousePos.y}%, rgba(200, 255, 0, 0.12) 0%, rgba(0, 240, 255, 0.08) 35%, transparent 70%)`,
-          }}
-        />
+        {/* 1. Subtle, Soft Ambient Center Glow (Zero heavy blur, ultra-light GPU usage) */}
+        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[850px] h-[350px] sm:h-[450px] bg-[radial-gradient(ellipse_at_center,rgba(200,255,0,0.06)_0%,rgba(0,240,255,0.04)_40%,transparent_70%)]" />
 
-        {/* 2. Keynote Luminous Top Light Cone */}
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] sm:w-[1000px] h-[450px] bg-[radial-gradient(ellipse_at_top,rgba(200,255,0,0.22)_0%,rgba(0,240,255,0.12)_35%,transparent_70%)] blur-3xl opacity-80" />
+        {/* 2. Soft Top Light Accent (Very gentle, not blinding) */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] sm:w-[800px] h-[220px] bg-[radial-gradient(ellipse_at_top,rgba(200,255,0,0.08)_0%,transparent_70%)]" />
 
-        {/* 3. Deep Chromatic Aurora Nebulae (Vibrant & Luxurious) */}
-        <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] sm:w-[1100px] sm:h-[650px] bg-gradient-to-tr from-[#c8ff00]/20 via-[#00f0ff]/15 to-[#ec4899]/20 rounded-full blur-[120px] animate-aurora-pulse" />
-        <div className="absolute -top-10 -right-20 w-[450px] h-[450px] bg-[#00f0ff]/15 rounded-full blur-[130px]" />
-        <div className="absolute bottom-10 -left-20 w-[500px] h-[500px] bg-[#ec4899]/15 rounded-full blur-[140px]" />
-
-        {/* 4. 3D Cosmic Orbital Plane (dotUniverse Signature System) */}
-        <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] sm:w-[1100px] sm:h-[1100px] lg:w-[1250px] lg:h-[1250px] [transform:perspective(1200px)_rotateX(68deg)] opacity-85">
-          {/* Outer dashed celestial track */}
-          <div className="absolute inset-0 rounded-full border border-white/15 border-dashed animate-cosmic-orbit" />
+        {/* 3. Lightweight 2D Celestial Orbit Ring (Clean, elegant & smooth on all CPUs) */}
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] sm:w-[780px] sm:h-[780px] [transform:rotateX(65deg)] opacity-60">
+          {/* Subtle outer orbit line */}
+          <div className="absolute inset-0 rounded-full border border-white/[0.08] animate-cosmic-orbit" />
           
-          {/* Middle illuminated orbit ring with the orbiting "dotUniverse" celestial node */}
-          <div className="absolute inset-[15%] rounded-full border border-[#c8ff00]/40 shadow-[0_0_60px_rgba(200,255,0,0.2),inset_0_0_40px_rgba(200,255,0,0.08)] animate-cosmic-orbit-reverse">
-            {/* Neon Lime Orbiting Planet Dot */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#c8ff00] shadow-[0_0_20px_#c8ff00,0_0_45px_rgba(200,255,0,0.9)] border-2 border-white" />
-            
-            {/* Cyber Cyan Counter-Satellite */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 rounded-full bg-[#00f0ff] shadow-[0_0_20px_#00f0ff] border border-white" />
+          {/* Middle orbit ring with single signature neon dot */}
+          <div className="absolute inset-[18%] rounded-full border border-white/[0.12] border-dashed animate-cosmic-orbit-reverse">
+            {/* Classy small glowing dot */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#c8ff00] shadow-[0_0_10px_#c8ff00]" />
           </div>
 
-          {/* Inner core horizon ring */}
-          <div className="absolute inset-[32%] rounded-full border border-[#00f0ff]/30 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.08)_0%,transparent_70%)] shadow-[inset_0_0_40px_rgba(0,240,255,0.15)]" />
-
-          {/* Center gravitational core pulse */}
-          <div className="absolute inset-[46%] rounded-full border border-white/20 bg-[#c8ff00]/10 animate-ping" style={{ animationDuration: '6s' }} />
+          {/* Inner subtle core ring */}
+          <div className="absolute inset-[38%] rounded-full border border-cyan-400/[0.15]" />
         </div>
 
-        {/* 5. Twinkling Stardust Constellation Field */}
-        <div className="absolute inset-0 overflow-hidden">
-          {CELESTIAL_STARS.map((star, i) => (
-            <div
-              key={i}
-              className="absolute rounded-full animate-stardust"
-              style={{
-                top: star.top,
-                left: star.left,
-                width: `${star.size}px`,
-                height: `${star.size}px`,
-                backgroundColor: star.color,
-                boxShadow: `0 0 ${star.size * 6}px ${star.color}, 0 0 ${star.size * 12}px ${star.color}`,
-                animationDelay: star.delay,
-              }}
-            />
-          ))}
+        {/* 4. Minimalist Stardust Points (Lightweight, pure CSS, no lag) */}
+        <div className="absolute inset-0">
+          <div className="absolute top-[18%] left-[18%] w-1 h-1 rounded-full bg-white/40 animate-pulse" style={{ animationDuration: '4s' }} />
+          <div className="absolute top-[28%] left-[82%] w-1.5 h-1.5 rounded-full bg-[#c8ff00]/50 animate-pulse" style={{ animationDuration: '5s' }} />
+          <div className="absolute top-[65%] left-[12%] w-1 h-1 rounded-full bg-[#00f0ff]/50 animate-pulse" style={{ animationDuration: '6s' }} />
+          <div className="absolute top-[75%] left-[85%] w-1.5 h-1.5 rounded-full bg-white/40 animate-pulse" style={{ animationDuration: '4.5s' }} />
+          <div className="absolute top-[45%] left-[6%] w-1 h-1 rounded-full bg-white/30 animate-pulse" style={{ animationDuration: '5.5s' }} />
+          <div className="absolute top-[38%] left-[92%] w-1 h-1 rounded-full bg-[#c8ff00]/40 animate-pulse" style={{ animationDuration: '3.5s' }} />
+          <div className="absolute top-[82%] left-[35%] w-1 h-1 rounded-full bg-[#00f0ff]/40 animate-pulse" style={{ animationDuration: '6.5s' }} />
         </div>
 
-        {/* 6. Technical Precision Grid with Smooth Vignette */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_45%,#000_60%,transparent_100%)] opacity-70" />
+        {/* 5. Clean, Crisp Modern Tech Grid with Smooth Radial Vignette */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_45%,#000_50%,transparent_100%)] opacity-60" />
       </div>
 
       {/* Content Container */}
