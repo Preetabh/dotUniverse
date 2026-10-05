@@ -34,7 +34,7 @@ export const DigitalMarketingCTA: React.FC = () => {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <CTAButton
-              href="mailto:contact@dotuniverse.io?subject=Free%2030-Minute%20Digital%20Marketing%20Audit%20Request"
+              href="mailto:support.dotuniverse@gmail.com?subject=Free%2030-Minute%20Digital%20Marketing%20Audit%20Request"
               variant="primary"
               size="lg"
               className="w-full sm:w-auto shadow-[0_0_40px_rgba(236,72,153,0.5)] !bg-gradient-to-r !from-[#ec4899] !via-[#f43f5e] !to-[#a855f7] !border-none !text-white font-mono font-bold tracking-wider"
@@ -44,7 +44,7 @@ export const DigitalMarketingCTA: React.FC = () => {
             </CTAButton>
 
             <a
-              href="mailto:contact@dotuniverse.io?subject=Direct%20Marketing%20Consultation%20Inquiry"
+              href="mailto:support.dotuniverse@gmail.com?subject=Direct%20Marketing%20Consultation%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#ec4899] hover:text-[#f472b6] cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#ec4899]" />

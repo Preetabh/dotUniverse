@@ -26,8 +26,8 @@ export const NAV_LINKS: NavItem[] = [
       { name: "AI Solutions", href: "#services", description: "Workflow automation and smart chatbots" },
     ],
   },
-  { name: "About", href: "#about" },
-  { name: "Work", href: "#portfolio" },
+  { name: "About", href: "/about" },
+  { name: "Work", href: "/work" },
   { name: "Reviews", href: "#testimonials" },
   { name: "Pricing", href: "#pricing" },
   { name: "Team", href: "#team" },
@@ -150,52 +150,192 @@ export const SERVICES = [
   },
 ];
 
-export const PORTFOLIO_PROJECTS = [
+export interface PortfolioProject {
+  id: string;
+  title: string;
+  category: string;
+  categorySlug: 'crm' | 'hrm' | 'comms' | 'ecommerce' | 'fitness' | 'education';
+  tagline: string;
+  result: string;
+  badge: string;
+  image: string;
+  stats: string;
+  tags: string[];
+  client: string;
+  year: string;
+  architecture: string[];
+  highlights: string[];
+}
+
+export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
   {
-    title: "Visa Direct",
-    category: "Digital Marketing & Analytics",
-    result: "Boosted inquiry conversions by 310% through targeted cross-border social funnels",
-    badge: "Live Client",
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80",
-    stats: "310% More Leads",
-    tags: ["Google Ads", "Meta Ads", "Analytics"]
+    id: "infrapilot-crm",
+    title: "InfraPilot — Construction ERP & CRM Portal",
+    category: "Projects & CRM Portal",
+    categorySlug: "crm",
+    tagline: "Plan • Build • Control — Enterprise site operations, budget forecasting, and multi-tenant client CRM.",
+    result: "Unified ₹3.4Cr+ in construction budget tracking and reduced project variance down to < 1.2% with live DB sync.",
+    badge: "Live Enterprise Client",
+    image: "/assets/projects/infrapilot-crm-portal.png",
+    stats: "₹34.7k Tracked • 0 Risk",
+    tags: ["Next.js 14", "PostgreSQL", "Tailwind CSS", "Recharts", "Node.js", "Multi-Tenant"],
+    client: "InfraPilot Infrastructure Ltd.",
+    year: "2025 - 2026",
+    architecture: ["Distributed Micro-services", "Real-Time Spend Sync", "Role-Based Access Control", "Site Audit Trail"],
+    highlights: [
+      "Dynamic 12-Month spend vs. forecast variance bar & area telemetry charts",
+      "Interactive Leads & Client CRM module with multi-stage deal tracking",
+      "Site Operations, Measurement Book, Daily Progress Reports (DPR), and Cost Control EVM",
+      "Multi-dashboard master admin switcher with instant recycle bin recovery"
+    ]
   },
   {
-    title: "El Broasteria",
-    category: "Web Development & Brand Ads",
-    result: "Built a bold visual brand identity and digital ordering platform that drove massive local footfall",
-    badge: "Live Client",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80",
-    stats: "2.4x In-Store Footfall",
-    tags: ["Next.js", "Brand Identity", "Google Local"]
+    id: "hrmitra-hrm",
+    title: "HrMitra — Enterprise HRM & Attendance Portal",
+    category: "HRM & Workforce Portal",
+    categorySlug: "hrm",
+    tagline: "Comprehensive human resource operating system with real-time biometric telemetry and payroll automation.",
+    result: "Automated attendance tracking for 1,200+ employees with 100% compliance rate and instant payroll generation.",
+    badge: "Live HR Platform",
+    image: "/assets/projects/hrmitra-hrm-portal.png",
+    stats: "100% Compliance • 0 Pending",
+    tags: ["React 19", "Node.js", "MongoDB", "Express", "Tailwind", "WebSockets"],
+    client: "HrMitra Workforce Solutions",
+    year: "2025 - 2026",
+    architecture: ["Live Biometric Sync", "Encrypted Payroll Ledger", "Automated Leave Workflows", "Shift Engine"],
+    highlights: [
+      "Live Attendance Console with dynamic real-time clock and instant punch telemetry",
+      "Quick action launcher for approvals, team attendance, and multi-format report exports",
+      "Leave request triage with automated approval escalations and past leave archives",
+      "Recruitment pipeline, shift scheduling, and granular role permissions console"
+    ]
   },
   {
-    title: "Services Cell Plus",
-    category: "Full Stack Web & SEO",
-    result: "Delivered an authoritative corporate web portal that established market trust in UK & Europe",
-    badge: "Live Client",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
-    stats: "#1 Google Ranking",
-    tags: ["React", "Custom CMS", "Technical SEO"]
+    id: "leadforce-portal",
+    title: "LeadForce 360 — Omnichannel Sales CRM & Pipeline",
+    category: "Lead Force Portal",
+    categorySlug: "crm",
+    tagline: "High-velocity sales CRM with automated lead scoring, WhatsApp business bots, and deal revenue forecasting.",
+    result: "Accelerated lead-to-close velocity by 340% while eliminating 80+ hours of manual data entry every month.",
+    badge: "High Growth CRM",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&auto=format&fit=crop&q=80",
+    stats: "+340% Close Rate",
+    tags: ["Next.js", "Redis", "WhatsApp API", "Stripe", "Prisma", "TypeScript"],
+    client: "Global SaaS & Real Estate Guild",
+    year: "2025",
+    architecture: ["Event-Driven Pipeline", "Auto-Dialer Integration", "AI Lead Scoring", "Webhook Dispatcher"],
+    highlights: [
+      "Visual Kanban pipeline stages with automated lead health indicators",
+      "Two-way WhatsApp and Email conversation synchronization directly inside lead cards",
+      "Predictive deal revenue forecasting powered by historical conversion velocity",
+      "Custom trigger workflows for automated follow-up sequences and rep task distribution"
+    ]
   },
   {
-    title: "FitTrack Pro App",
-    category: "App Development",
-    result: "Sleek workout & nutrition tracker with real-time biometric charts and social challenges",
-    badge: "Featured App",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&auto=format&fit=crop&q=80",
-    stats: "4.9 ★ App Rating",
-    tags: ["Flutter", "Node.js", "Firebase"]
+    id: "vibepulse-video-chat",
+    title: "VibePulse — WebRTC Video Calling & Real-Time Chat",
+    category: "Real-Time Comms",
+    categorySlug: "comms",
+    tagline: "Low-latency WebRTC video conferencing suite with crystal HD audio, screen share, and encrypted chat channels.",
+    result: "Sustained sub-50ms round-trip latency across 10,000+ concurrent audio/video conference rooms.",
+    badge: "Ultra Low Latency",
+    image: "https://images.unsplash.com/photo-1616469829941-c7200edec809?w=1200&auto=format&fit=crop&q=80",
+    stats: "< 50ms Latency • HD 60fps",
+    tags: ["WebRTC", "Socket.io", "React", "Node.js", "Redis Pub/Sub", "SFU Mesh"],
+    client: "VibePulse Technologies",
+    year: "2025",
+    architecture: ["Selective Forwarding Unit (SFU)", "End-to-End Encryption", "Adaptive Bitrate Streaming", "STUN/TURN Mesh"],
+    highlights: [
+      "Peer-to-peer and SFU video conferencing with adaptive bitrate downsampling",
+      "Multi-party screen sharing, virtual background canvas, and noise suppression",
+      "Rich markdown chat with thread replies, emoji reactions, and file attachments",
+      "End-to-end encrypted direct messages and group workspaces"
+    ]
   },
   {
-    title: "Krypton Luxury Store",
-    category: "E-Commerce Platform",
-    result: "High-end luxury apparel store featuring 3D product previews and instant one-click checkout",
-    badge: "E-Commerce",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80",
-    stats: "4.2% Conversion Rate",
-    tags: ["Tailwind", "Stripe", "Next.js"]
+    id: "aura-luxe-ecommerce",
+    title: "Aura Luxe — Headless E-Commerce & 3D Storefront",
+    category: "E-Commerce",
+    categorySlug: "ecommerce",
+    tagline: "Ultra-fast headless commerce platform with 3D product visualizer, multi-currency pricing, and one-click checkout.",
+    result: "Achieved 4.8% conversion rate and sub-second page transitions, generating ₹1.8Cr+ in GMV in Q4.",
+    badge: "Headless E-Commerce",
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80",
+    stats: "4.8% CVR • ₹1.8Cr GMV",
+    tags: ["Next.js", "Three.js", "Shopify API", "Stripe", "Tailwind", "Algolia"],
+    client: "Aura Luxe International",
+    year: "2024 - 2025",
+    architecture: ["Jamstack Static Generation", "Edge Cart Caching", "Webhook Inventory Sync", "Instant Algolia Search"],
+    highlights: [
+      "Interactive 3D model rotation and AR preview directly inside product pages",
+      "Dynamic multi-currency pricing with automatic geo-IP localization",
+      "Frictionless slide-over cart drawer with automated upsells and cross-sells",
+      "Lightning-fast faceted filtering by color, size, material, and instant live search"
+    ]
   },
+  {
+    id: "ironforge-gym",
+    title: "IronForge Gym — Athletic Club Portal & Booking Engine",
+    category: "Fitness & Club Portal",
+    categorySlug: "fitness",
+    tagline: "Modern high-octane fitness club website with trainer booking, live class schedules, and member subscription tiers.",
+    result: "Drove 420+ new monthly recurring gym memberships and reduced front-desk class booking friction to zero.",
+    badge: "Gym & Fitness",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&auto=format&fit=crop&q=80",
+    stats: "420+ Monthly Members",
+    tags: ["React", "Node.js", "Tailwind CSS", "Razorpay Subscriptions", "Calendar API"],
+    client: "IronForge Athletic Performance",
+    year: "2024",
+    architecture: ["Recurring Subscription Engine", "Real-Time Slot Booking", "Member QR Check-In", "Diet Macro Calculator"],
+    highlights: [
+      "Dynamic interactive weekly class schedule with real-time seat availability countdown",
+      "Personal trainer profile booking with calendar slot synchronization",
+      "Automated monthly recurring membership billing with instant invoice dispatch",
+      "Nutrition & workout telemetry dashboard for members to track bench, squat & cardio milestones"
+    ]
+  },
+  {
+    id: "edusphere-school",
+    title: "EduSphere — Smart School & Campus Management System",
+    category: "EdTech & School ERP",
+    categorySlug: "education",
+    tagline: "Comprehensive educational institution ERP unifying student admissions, exam grading, fee collection, and parent app.",
+    result: "Currently powering operations for 3,500+ students and 140+ faculty across 2 modern campuses with zero paperwork.",
+    badge: "School Management",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&auto=format&fit=crop&q=80",
+    stats: "3,500+ Students • 100% Digital",
+    tags: ["React", "PostgreSQL", "Node.js", "Docker", "Tailwind", "SMS Gateway"],
+    client: "EduSphere International Academies",
+    year: "2025",
+    architecture: ["Multi-Tenant Academic Database", "Automated Report Generator", "Parent Notification Engine", "Fee Reconciliation"],
+    highlights: [
+      "Student Information System (SIS) tracking full academic lifecycle from admission to alumni",
+      "Online fee collection gateway with automatic late fee calculations and receipt generation",
+      "Automated exam grading, GPA computation, and one-click PDF report card compilation",
+      "Parent-teacher communication portal with attendance SMS alerts and bus tracking telemetry"
+    ]
+  },
+  {
+    id: "pulsecare-telehealth",
+    title: "PulseCare — Digital Clinic & Telemedicine Portal",
+    category: "Healthcare & Clinic ERP",
+    categorySlug: "comms",
+    tagline: "HIPAA-compliant telehealth platform connecting patients with specialist doctors via encrypted video and e-prescriptions.",
+    result: "Facilitated 18,000+ remote consultations with 99.4% patient satisfaction and instant lab report delivery.",
+    badge: "HealthTech Portal",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&auto=format&fit=crop&q=80",
+    stats: "18k+ Consultations",
+    tags: ["WebRTC", "Next.js", "PostgreSQL", "HIPAA Ready", "Stripe Health"],
+    client: "PulseCare Health Systems",
+    year: "2024 - 2025",
+    architecture: ["HIPAA-Compliant Vault", "WebRTC Video Tunnel", "Digital Signature Engine", "Pharmacy API"],
+    highlights: [
+      "Instant doctor appointment booking with specialty and language preference filters",
+      "One-click high-definition encrypted video consultation without app downloads",
+      "Digital prescription pad with instant forwarding to connected local pharmacies",
+      "Secure electronic medical record (EMR) repository with patient diagnostic history"
+    ]
+  }
 ];
 
 export const TESTIMONIALS = [
@@ -307,15 +447,15 @@ export const TEAM_MEMBERS = [
   {
     name: "Vishu Awasthi",
     role: "FOUNDER & STRATEGIST",
-    bio: "Visionary behind dotUniverse. Ali drives company strategy, culture, and high-velocity digital execution with an obsessive passion for building brands that dominate.",
-    image: "",
+    bio: "Visionary behind dotUniverse. Vishu drives company strategy, culture, and high-velocity digital execution with an obsessive passion for building brands that dominate.",
+    image: "/assets/founder.png",
     linkedin: "https://www.linkedin.com/in/#/",
     accent: "#c8ff00"
   },
   {
     name: "Sardar Japnam Singh Lal",
     role: "CO-FOUNDER",
-    bio: "The visual storyteller. Priyanshu has directed and produced high-retention content for 20+ brands across lifestyle, tech, and retail, averaging 500K+ organic views.",
+    bio: "The visual storyteller and creative co-founder. Overseeing high-retention content direction and production for 20+ partner brands with 500K+ organic views.",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
     linkedin: "https://www.linkedin.com/in/#/",
     accent: "#ff005e"

@@ -247,7 +247,7 @@ export const DigitalMarketingROASCalculator: React.FC<DigitalMarketingROASCalcul
               {/* Action Callout */}
               <div className="mt-8 pt-6 border-t border-white/10">
                 <a
-                  href={`mailto:contact@dotuniverse.io?subject=Digital%20Marketing%20Strategy%20Inquiry%20(${formatMoney(monthlyBudget)}%20Budget)&body=Hello%20dotUniverse,%0A%0AI%20used%20your%20ROAS%20Simulator%20with%20a%20budget%20of%20${formatMoney(monthlyBudget)}%20for%20my%20business%20in%20the%20${encodeURIComponent(selectedInd.name)}%20sector.%20I%20would%20like%20to%20audit%20my%20growth%20pipeline.`}
+                  href={`mailto:support.dotuniverse@gmail.com?subject=Digital%20Marketing%20Strategy%20Inquiry%20(${formatMoney(monthlyBudget)}%20Budget)&body=Hello%20dotUniverse,%0A%0AI%20used%20your%20ROAS%20Simulator%20with%20a%20budget%20of%20${formatMoney(monthlyBudget)}%20for%20my%20business%20in%20the%20${encodeURIComponent(selectedInd.name)}%20sector.%20I%20would%20like%20to%20audit%20my%20growth%20pipeline.`}
                   className="w-full inline-flex items-center justify-center gap-2 py-4 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider text-black bg-gradient-to-r from-[#ec4899] via-[#f43f5e] to-[#a855f7] hover:opacity-90 transition-all shadow-[0_0_30px_rgba(236,72,153,0.4)] cursor-pointer"
                 >
                   <span>Apply This Growth Strategy</span>

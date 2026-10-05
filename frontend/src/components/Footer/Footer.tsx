@@ -25,8 +25,8 @@ export const Footer: React.FC = () => {
   ];
 
   const companyLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Our Work & Case Studies", href: "#portfolio" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Work & Case Studies", href: "/work" },
     { name: "Client Testimonials", href: "#testimonials" },
     { name: "Investment & Pricing", href: "#pricing" },
     { name: "Leadership Team", href: "#team" },
@@ -134,19 +134,19 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3 text-xs sm:text-sm text-white/60">
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#c8ff00]" />
-                <a href="mailto:contact@dotuniverse.io" className="hover:text-white transition-colors">
-                  contact@dotuniverse.io
+                <a href="mailto:support.dotuniverse@gmail.com" className="hover:text-white transition-colors">
+                  support.dotuniverse@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MessageSquare className="w-4 h-4 text-[#00f0ff]" />
-                <a href="mailto:contact@dotuniverse.io?subject=Project%20Consultation%20Inquiry" className="hover:text-white transition-colors">
+                <a href="mailto:support.dotuniverse@gmail.com?subject=Project%20Consultation%20Inquiry" className="hover:text-white transition-colors">
                   Book a Consultation
                 </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#ff005e] shrink-0 mt-0.5" />
-                <span>Global Remote Operations with Hubs in Delhi NCR, London &amp; Dubai</span>
+                <span>Global Remote Operations with Hubs  Based in Barabanki, India</span>
               </li>
             </ul>
 

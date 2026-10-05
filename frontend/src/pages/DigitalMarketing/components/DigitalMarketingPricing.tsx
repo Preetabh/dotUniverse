@@ -123,7 +123,7 @@ export const DigitalMarketingPricing: React.FC<DigitalMarketingPricingProps> = (
                 {/* Bottom CTA Button */}
                 <div className="mt-10 pt-6 border-t border-white/10">
                   <a
-                    href={`mailto:contact@dotuniverse.io?subject=Digital%20Marketing%20Inquiry%20-%20${encodeURIComponent(plan.name)}%20Tier&body=Hello%20dotUniverse,%0A%0AI%20would%20like%20to%20get%20started%20with%20the%20${encodeURIComponent(plan.name)}%20Digital%20Marketing%20package.`}
+                    href={`mailto:support.dotuniverse@gmail.com?subject=Digital%20Marketing%20Inquiry%20-%20${encodeURIComponent(plan.name)}%20Tier&body=Hello%20dotUniverse,%0A%0AI%20would%20like%20to%20get%20started%20with%20the%20${encodeURIComponent(plan.name)}%20Digital%20Marketing%20package.`}
                     className={`w-full inline-flex items-center justify-center gap-2 py-4 rounded-full font-mono text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer ${
                       isFeatured
                         ? 'bg-gradient-to-r from-[#ec4899] via-[#f43f5e] to-[#a855f7] text-white shadow-[0_0_30px_rgba(236,72,153,0.4)] hover:opacity-95'

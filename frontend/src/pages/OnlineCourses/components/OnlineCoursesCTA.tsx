@@ -34,7 +34,7 @@ export const OnlineCoursesCTA: React.FC = () => {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <CTAButton
-              href="mailto:contact@dotuniverse.io?subject=dotUniverse%20Academy%20Cohort%20Application&body=Hello%20dotUniverse%20Academy,%0A%0AI%20would%20like%20to%20apply%20for%20the%20upcoming%20masterclass%20cohort.%20Please%20send%20me%20the%20curriculum%20details%20and%20application%20form."
+              href="mailto:support.dotuniverse@gmail.com?subject=dotUniverse%20Academy%20Cohort%20Application&body=Hello%20dotUniverse%20Academy,%0A%0AI%20would%20like%20to%20apply%20for%20the%20upcoming%20masterclass%20cohort.%20Please%20send%20me%20the%20curriculum%20details%20and%20application%20form."
               variant="primary"
               size="lg"
               className="w-full sm:w-auto shadow-[0_0_40px_rgba(245,158,11,0.45)] !bg-gradient-to-r !from-[#f59e0b] !via-[#fbbf24] !to-[#d97706] !border-none !text-black font-mono font-black tracking-wider"
@@ -44,7 +44,7 @@ export const OnlineCoursesCTA: React.FC = () => {
             </CTAButton>
 
             <a
-              href="mailto:contact@dotuniverse.io?subject=Admissions%20Counseling%20Call%20Request"
+              href="mailto:support.dotuniverse@gmail.com?subject=Admissions%20Counseling%20Call%20Request"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#f59e0b] hover:text-[#fbbf24] cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#fbbf24]" />

@@ -4,6 +4,8 @@ import { WebDevelopment } from './pages/WebDevelopment/WebDevelopment';
 import { AppDevelopment } from './pages/AppDevelopment/AppDevelopment';
 import { DigitalMarketing } from './pages/DigitalMarketing/DigitalMarketing';
 import { OnlineCourses } from './pages/OnlineCourses/OnlineCourses';
+import { About } from './pages/About/About';
+import { Work } from './pages/Work/Work';
 
 export const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -48,6 +50,8 @@ export const App: React.FC = () => {
   };
 
   const renderCurrentPage = () => {
+    if (currentPath === '/work' || currentPath === '/projects') return <Work />;
+    if (currentPath === '/about') return <About />;
     if (currentPath === '/web-development') return <WebDevelopment />;
     if (currentPath === '/app-development') return <AppDevelopment />;
     if (currentPath === '/digital-marketing') return <DigitalMarketing />;
@@ -72,6 +76,28 @@ export const App: React.FC = () => {
           }`}
         >
           Home
+        </button>
+        <button
+          type="button"
+          onClick={() => navigateTo('/work')}
+          className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+            currentPath === '/work' || currentPath === '/projects'
+              ? 'bg-gradient-to-r from-cyan-400 via-sky-300 to-[#c8ff00] text-black shadow-[0_0_15px_rgba(200,255,0,0.4)]'
+              : 'text-[#c8ff00]/80 hover:text-[#c8ff00]'
+          }`}
+        >
+          Work / Portals
+        </button>
+        <button
+          type="button"
+          onClick={() => navigateTo('/about')}
+          className={`px-3 py-1.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+            currentPath === '/about'
+              ? 'bg-gradient-to-r from-cyan-400 to-indigo-500 text-black shadow-[0_0_15px_rgba(34,211,238,0.5)]'
+              : 'text-cyan-300/80 hover:text-cyan-200'
+          }`}
+        >
+          About Us
         </button>
         <button
           type="button"

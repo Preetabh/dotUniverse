@@ -263,7 +263,7 @@ export const OnlineCoursesInteractiveLab: React.FC<OnlineCoursesInteractiveLabPr
               {/* Action Button */}
               <div className="mt-8 pt-6 border-t border-white/10">
                 <a
-                  href={`mailto:contact@dotuniverse.io?subject=Academy%20Career%20Roadmap%20Inquiry%20(${encodeURIComponent(targetRoleObj.name)})&body=Hello%20dotUniverse%20Academy,%0A%0AI%20ran%20the%20Career%20Simulator.%20My%20current%20background%20is%20${encodeURIComponent(currentRoleObj.name)}%20and%20I%20am%20targeting%20a%20career%20jump%20to%20${encodeURIComponent(targetRoleObj.name)}%20with%20${hoursPerWeek}%20hours/week%20commitment.%20Please%20schedule%20a%201-on-1%20admissions%20call.`}
+                  href={`mailto:support.dotuniverse@gmail.com?subject=Academy%20Career%20Roadmap%20Inquiry%20(${encodeURIComponent(targetRoleObj.name)})&body=Hello%20dotUniverse%20Academy,%0A%0AI%20ran%20the%20Career%20Simulator.%20My%20current%20background%20is%20${encodeURIComponent(currentRoleObj.name)}%20and%20I%20am%20targeting%20a%20career%20jump%20to%20${encodeURIComponent(targetRoleObj.name)}%20with%20${hoursPerWeek}%20hours/week%20commitment.%20Please%20schedule%20a%201-on-1%20admissions%20call.`}
                   className="w-full inline-flex items-center justify-center gap-2 py-4 rounded-full font-mono text-xs font-black uppercase tracking-wider text-black bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] hover:opacity-90 transition-all shadow-[0_0_30px_rgba(245,158,11,0.4)] cursor-pointer"
                 >
                   <span>Book Free 1-on-1 Career Evaluation</span>

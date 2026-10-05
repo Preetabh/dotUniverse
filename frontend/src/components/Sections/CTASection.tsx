@@ -25,7 +25,7 @@ export const CTASection: React.FC = () => {
 
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <CTAButton
-              href="mailto:contact@dotuniverse.io"
+              href="mailto:support.dotuniverse@gmail.com"
               variant="primary"
               size="lg"
               className="w-full sm:w-auto"
@@ -35,7 +35,7 @@ export const CTASection: React.FC = () => {
             </CTAButton>
 
             <a
-              href="mailto:contact@dotuniverse.io?subject=Direct%20Project%20Inquiry"
+              href="mailto:support.dotuniverse@gmail.com?subject=Direct%20Project%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white text-base font-bold uppercase tracking-wider transition-all"
             >
               <Mail className="w-5 h-5 text-[#00f0ff]" />

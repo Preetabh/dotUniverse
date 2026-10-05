@@ -31,7 +31,7 @@ export const AppDevVIPCTA: React.FC = () => {
           {/* CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <a
-              href="mailto:contact@dotuniverse.io?subject=App%20Development%20VIP%20Commission%20Inquiry"
+              href="mailto:support.dotuniverse@gmail.com?subject=App%20Development%20VIP%20Commission%20Inquiry"
               className="gold-btn w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full text-black font-mono text-sm uppercase tracking-wider font-extrabold shadow-[0_0_35px_rgba(212,175,55,0.4)] cursor-pointer"
             >
               <span>Schedule VIP Consultation</span>
@@ -39,7 +39,7 @@ export const AppDevVIPCTA: React.FC = () => {
             </a>
 
             <a
-              href="mailto:contact@dotuniverse.io?subject=App%20Development%20Bespoke%20Commission%20Inquiry"
+              href="mailto:support.dotuniverse@gmail.com?subject=App%20Development%20Bespoke%20Commission%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-[#D4AF37]/35 bg-white/5 hover:bg-[#D4AF37]/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#D4AF37] hover:text-[#F5D061] cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#F5D061]" />

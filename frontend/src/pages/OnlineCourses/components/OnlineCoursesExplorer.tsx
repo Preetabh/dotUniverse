@@ -323,7 +323,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
                   </div>
 
                   <a
-                    href={`mailto:contact@dotuniverse.io?subject=Academy%20Enrollment%20Inquiry%20-%20${encodeURIComponent(c.title)}&body=Hello%20dotUniverse%20Academy,%0A%0AI%20would%20like%20to%20enroll%20in%20the%20${encodeURIComponent(c.title)}%20masterclass.%20Please%20share%20the%20admission%20criteria%20and%20next%20cohort%20dates.`}
+                    href={`mailto:support.dotuniverse@gmail.com?subject=Academy%20Enrollment%20Inquiry%20-%20${encodeURIComponent(c.title)}&body=Hello%20dotUniverse%20Academy,%0A%0AI%20would%20like%20to%20enroll%20in%20the%20${encodeURIComponent(c.title)}%20masterclass.%20Please%20share%20the%20admission%20criteria%20and%20next%20cohort%20dates.`}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-mono text-xs font-black uppercase tracking-wider text-black bg-gradient-to-r from-[#f59e0b] to-[#fbbf24] hover:opacity-95 transition-all shadow-[0_0_25px_rgba(245,158,11,0.35)] cursor-pointer"
                   >
                     <span>Reserve Seat</span>

@@ -38,7 +38,7 @@ export const WebDevCTA: React.FC = () => {
           {/* Interactive CTAs */}
           <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
             <CTAButton
-              href="mailto:contact@dotuniverse.io"
+              href="mailto:support.dotuniverse@gmail.com"
               variant="primary"
               size="lg"
               className="w-full sm:w-auto shadow-[0_0_30px_rgba(200,255,0,0.3)] hover:shadow-[0_0_45px_rgba(200,255,0,0.5)] font-mono font-bold tracking-wider"
@@ -48,7 +48,7 @@ export const WebDevCTA: React.FC = () => {
             </CTAButton>
 
             <a
-              href="mailto:contact@dotuniverse.io?subject=Web%20Development%20Project%20Inquiry"
+              href="mailto:support.dotuniverse@gmail.com?subject=Web%20Development%20Project%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#c8ff00] hover:text-[#c8ff00] cursor-pointer"
             >
               <Mail className="w-4 h-4 text-[#c8ff00]" />

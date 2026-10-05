@@ -7,9 +7,9 @@ export const OnlineCoursesMentors: React.FC = () => {
     {
       name: "Vishu Awasthi",
       role: "FOUNDER & GROWTH ARCHITECT",
-      bio: "Visionary growth strategist at dotUniverse. Ali directs multi-million dollar ad spend and trains students on high-velocity paid acquisition and algorithmic scaling.",
-      image: "",
-      linkedin: "https://www.linkedin.com/in/aliahmedsiddiq/",
+      bio: "Visionary founder & growth strategist at dotUniverse. Vishu directs multi-million dollar ad spend and trains students on high-velocity paid acquisition and algorithmic scaling.",
+      image: "/assets/founder.png",
+      linkedin: "https://www.linkedin.com/in/#/",
       accent: "#f59e0b",
       specialty: "Performance Marketing & Funnel CRO"
     },
@@ -18,7 +18,7 @@ export const OnlineCoursesMentors: React.FC = () => {
       role: "VIDEOGRAPHER & CREATIVE DIRECTOR",
       bio: "Visual storyteller behind high-retention video campaigns. Directed content generating 500K+ organic impressions for leading consumer and tech brands.",
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=80",
-      linkedin: "https://www.linkedin.com/in/priyanshu-saraogi-7816b1323/",
+      linkedin: "https://www.linkedin.com/in/#/",
       accent: "#ec4899",
       specialty: "Viral Hook Production & Directing"
     },
