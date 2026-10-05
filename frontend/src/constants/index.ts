@@ -21,16 +21,14 @@ export const NAV_LINKS: NavItem[] = [
       { name: "Website Development", href: "/web-development", trending: true, description: "Custom Next.js & React web platforms" },
       { name: "App Development", href: "/app-development", trending: true, description: "Bespoke iOS, Android & Cross-platform apps" },
       { name: "Digital Marketing", href: "/digital-marketing", trending: true, description: "SEO, Performance marketing & paid ads" },
-      { name: "DesignX (Brand & UI/UX)", href: "#services", trending: true, description: "Conversion-optimized product design" },
       { name: "Online Courses", href: "/online-courses", trending: true, description: "Practical mastery in tech & digital marketing" },
       { name: "AI Solutions", href: "#services", description: "Workflow automation and smart chatbots" },
     ],
   },
   { name: "About", href: "/about" },
   { name: "Work", href: "/work" },
-  { name: "Reviews", href: "#testimonials" },
-  { name: "Pricing", href: "#pricing" },
-  { name: "Team", href: "#team" },
+  { name: "Careers", href: "/careers" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export const TECH_MARQUEE = [
@@ -48,6 +46,67 @@ export const TECH_MARQUEE = [
   { name: "AWS Cloud", category: "DevOps" },
   { name: "PostgreSQL", category: "Database" },
   { name: "GraphQL", category: "API" },
+];
+
+export const APP_DEV_MARQUEE = [
+  { name: "Flutter", category: "Cross-Platform" },
+  { name: "React Native", category: "Cross-Platform" },
+  { name: "Swift & SwiftUI", category: "iOS Native" },
+  { name: "Kotlin & Jetpack", category: "Android Native" },
+  { name: "Dart", category: "Language" },
+  { name: "Firebase & Firestore", category: "Mobile Cloud" },
+  { name: "SQLite & Watermelon", category: "Offline Sync" },
+  { name: "GraphQL & Apollo", category: "Mobile API" },
+  { name: "WebSockets & Socket.io", category: "Real-Time Mesh" },
+  { name: "Fastlane & CI/CD", category: "Automated Deploy" },
+  { name: "App Store & TestFlight", category: "Apple Review" },
+  { name: "Google Play Console", category: "Android Publish" },
+  { name: "RevenueCat", category: "In-App Subscriptions" },
+  { name: "Apple PushKit & APNs", category: "Push Telemetry" },
+  { name: "Metal & Shader Graph", category: "60-120 FPS UI" },
+];
+
+export const WEB_DEV_MARQUEE = [
+  { name: "Next.js 15", category: "Hybrid Framework" },
+  { name: "React 19", category: "UI Architecture" },
+  { name: "TypeScript 5.x", category: "Strict Contracts" },
+  { name: "Tailwind CSS", category: "Atomic Design" },
+  { name: "Three.js & WebGL", category: "3D Spatial" },
+  { name: "Node.js & Bun", category: "High Concurrency" },
+  { name: "PostgreSQL & Prisma", category: "Relational ACID" },
+  { name: "Redis In-Memory", category: "Sub-2ms Cache" },
+  { name: "Cloudflare Edge", category: "Global Serverless" },
+  { name: "Docker & K8s", category: "Cluster DevOps" },
+  { name: "GSAP & Framer Motion", category: "Kinetic Physics" },
+  { name: "GraphQL & tRPC", category: "Type-Safe APIs" },
+];
+
+export const DIGITAL_MARKETING_MARQUEE = [
+  { name: "Meta Ads Manager", category: "Performance Media" },
+  { name: "Google Ads & PMax", category: "High Intent Search" },
+  { name: "TikTok For Business", category: "Viral Creative" },
+  { name: "Google Analytics 4 (GA4)", category: "Multi-Touch Attribution" },
+  { name: "Ahrefs & SEMrush", category: "Technical SEO" },
+  { name: "Triple Whale", category: "1st-Party Pixel" },
+  { name: "Meta Conversions API (CAPI)", category: "Server-Side Tracking" },
+  { name: "Klaviyo & Postscript", category: "Retention & SMS" },
+  { name: "Hotjar & Microsoft Clarity", category: "Heatmaps & CRO" },
+  { name: "Shopify Plus", category: "High-Ticket E-Com" },
+  { name: "YouTube Direct-Response", category: "Video Funnels" },
+  { name: "LinkedIn Campaign Manager", category: "B2B ABM Lead Gen" },
+];
+
+export const COURSES_MARQUEE = [
+  { name: "Interactive Coding Labs", category: "Hands-On Sandbox" },
+  { name: "1-on-1 Founder Mentorship", category: "Direct Sprints" },
+  { name: "Full-Stack Next.js 15", category: "MERN To Edge" },
+  { name: "AI Agent Engineering", category: "RAG & LLM Workflows" },
+  { name: "Performance Marketing Bootcamp", category: "5x ROAS Scaling" },
+  { name: "DSA & System Architecture", category: "Faang / Unicorn Prep" },
+  { name: "Production PR Code Reviews", category: "Zero-Debt Standard" },
+  { name: "Placement Sprint Guarantee", category: "Career Jumps" },
+  { name: "Private Discord Dojo", category: "24/7 Hacker Peer Guild" },
+  { name: "Verified Credential Badges", category: "Proof of Work" },
 ];
 
 export const ABOUT_STATS = [
@@ -105,7 +164,7 @@ export const SERVICES = [
   },
   {
     id: "uiux-design",
-    title: "DesignX (UI/UX & Branding)",
+    title: "UI/UX & Brand Systems",
     category: "Product Design",
     desc: "Designs that command respect and spark desire. Complete design systems, intuitive wireframes, and memorable visual brand identities.",
     img: "https://images.unsplash.com/photo-1581291518655-9523c932deb2?w=800&auto=format&fit=crop&q=80",
@@ -373,18 +432,19 @@ export const TESTIMONIALS = [
 
 export const PRICING_PLANS = [
   {
-    name: "Launch",
+    name: "Launch Special",
     id: "tier-launch",
     prices: {
-      INR: "₹4,999",
-      USD: "$69",
-      GBP: "£55",
-      AED: "250 AED",
+      INR: "₹999",
+      USD: "$12",
+      GBP: "£10",
+      AED: "45 AED",
     },
-    pricingLabel: "PER MONTH",
-    tagline: "Perfect for businesses ready to establish a strong presence online",
-    cta: "GET STARTED →",
-    featured: false,
+    pricingLabel: "PER MONTH • PROMO",
+    tagline: "Ultra-affordable starter package for businesses ready to dominate online",
+    cta: "GET STARTED @ ₹999 →",
+    featured: true,
+    badge: "FLASH DEAL",
     features: [
       "Full management of 2 social media platforms",
       "12 custom posts + 5 Reels per month",
@@ -398,16 +458,15 @@ export const PRICING_PLANS = [
     name: "Scale",
     id: "tier-scale",
     prices: {
-      INR: "₹9,999",
-      USD: "$139",
-      GBP: "£110",
-      AED: "510 AED",
+      INR: "₹1,999",
+      USD: "$25",
+      GBP: "£20",
+      AED: "89 AED",
     },
     pricingLabel: "PER MONTH",
     tagline: "For ambitious brands ready to accelerate reach and multiply revenue",
     cta: "START SCALING →",
-    featured: true,
-    badge: "MOST POPULAR",
+    featured: false,
     features: [
       "Everything in Launch included",
       "Full management of 3 social media platforms",
@@ -420,7 +479,7 @@ export const PRICING_PLANS = [
     ],
   },
   {
-    name: "Conquer (Custom)",
+    name: "Universe (Custom)",
     id: "tier-custom",
     prices: {
       INR: "Custom",

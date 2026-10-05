@@ -41,7 +41,7 @@ export const OnlineCourses: React.FC = () => {
         <OnlineCoursesStatsBar />
 
         {/* 3. Global Alumni Hiring Partner Marquee */}
-        <BrandMarquee />
+        <BrandMarquee field="courses" />
 
         {/* 4. Filterable Masterclass Catalog with Syllabus Drawers */}
         <OnlineCoursesExplorer currentCurrency={currency} />

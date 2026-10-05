@@ -27,7 +27,7 @@ export const ServicesSection: React.FC = () => {
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase">
-            Services Built to <span className="text-[#c8ff00]">Conquer</span>
+            Services Built to <span className="text-[#c8ff00]">Universe</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-white/60 leading-relaxed">

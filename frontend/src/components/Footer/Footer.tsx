@@ -8,18 +8,18 @@ export const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { name: "LinkedIn", href: "https://www.linkedin.com/company/codexconquer", icon: "in" },
-    { name: "Instagram", href: "https://www.instagram.com/codexconquer", icon: "ig" },
-    { name: "Facebook", href: "https://www.facebook.com/codexconquerofficial/", icon: "fb" },
-    { name: "YouTube", href: "https://youtube.com/@codexconquer", icon: "yt" },
-    { name: "X", href: "https://x.com/CodexConquer", icon: "x" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/dotuniverse", icon: "in" },
+    { name: "Instagram", href: "https://www.instagram.com/dotuniverse", icon: "ig" },
+    { name: "Facebook", href: "https://www.facebook.com/dotuniverseofficial/", icon: "fb" },
+    { name: "YouTube", href: "https://youtube.com/@dotuniverse", icon: "yt" },
+    { name: "X", href: "https://x.com/dotuniverse", icon: "x" },
   ];
 
   const serviceLinks = [
     { name: "Website Development", href: "/web-development" },
     { name: "Mobile App Development", href: "/app-development" },
     { name: "Digital Growth Marketing", href: "/digital-marketing" },
-    { name: "DesignX (UI/UX & Brand)", href: "#services" },
+    { name: "Custom Portals & CRM", href: "/work" },
     { name: "AI Solutions & Bots", href: "#services" },
     { name: "dotUniverse Academy", href: "/online-courses" },
   ];
@@ -27,9 +27,9 @@ export const Footer: React.FC = () => {
   const companyLinks = [
     { name: "About Us", href: "/about" },
     { name: "Our Work & Case Studies", href: "/work" },
-    { name: "Client Testimonials", href: "#testimonials" },
-    { name: "Investment & Pricing", href: "#pricing" },
+    { name: "Careers & Culture", href: "/careers" },
     { name: "Leadership Team", href: "#team" },
+    { name: "Contact & Inquiries", href: "/contact" },
   ];
 
   const legalLinks = [

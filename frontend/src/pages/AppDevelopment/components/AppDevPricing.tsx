@@ -14,30 +14,30 @@ export const AppDevPricing: React.FC<AppDevPricingProps> = ({
   const tiers = [
     {
       code: "TIER::01",
-      name: "Signature MVP",
-      scope: "Single Flagship Platform",
-      prices: { INR: "₹49,999", USD: "$599", GBP: "£480", AED: "2,200 AED" },
-      desc: "For innovators establishing a market presence with a single high-performance iOS or Android app.",
-      cta: "Commission Signature MVP",
+      name: "Starter Architecture Blueprint",
+      scope: "Interactive Prototype & System Spec",
+      prices: { INR: "₹999", USD: "$12", GBP: "£10", AED: "45 AED" },
+      desc: "For founders validating a concept with an interactive Figma prototype and technical architecture blueprint.",
+      cta: "Commission Starter @ ₹999",
       popular: false,
       features: [
-        "Native Swift (iOS) or Kotlin (Android)",
-        "Bespoke Figma UI/UX design system",
-        "Up to 8 custom feature viewports",
-        "Secure cloud authentication & database",
-        "Push notifications & analytics tracking",
-        "App Store / Google Play submission",
-        "4 to 6 weeks guaranteed delivery",
-        "180 days dedicated VIP warranty"
+        "Interactive clickable Figma prototype",
+        "System architecture & schema design",
+        "iOS (Swift) / Android (Kotlin) feasibility plan",
+        "Cloud backend & database scoping",
+        "Push notification & auth workflow design",
+        "App Store & Google Play compliance audit",
+        "3 to 5 days rapid delivery",
+        "100% credit toward production build"
       ]
     },
     {
       code: "TIER::02",
-      name: "Prestige Growth",
-      scope: "Dual iOS & Android Ecosystem",
-      prices: { INR: "₹1,19,999", USD: "$1,450", GBP: "£1,150", AED: "5,300 AED" },
-      desc: "Our most coveted engagement. Simultaneous dual-platform launch with offline-first synchronization.",
-      cta: "Commission Prestige Suite",
+      name: "Signature MVP",
+      scope: "Dual iOS & Android App",
+      prices: { INR: "₹1,999", USD: "$25", GBP: "£20", AED: "89 AED" },
+      desc: "Our most popular engagement. High-performance cross-platform application ready for launch.",
+      cta: "Commission Signature Suite",
       popular: true,
       features: [
         "Unified cross-platform (Flutter or React Native)",
@@ -47,8 +47,7 @@ export const AppDevPricing: React.FC<AppDevPricingProps> = ({
         "Stripe / In-App Purchase integration",
         "Automated CI/CD test deployment",
         "App Store & Google Play VIP approval guarantee",
-        "8 to 10 weeks delivery milestone window",
-        "180 days dedicated VIP warranty"
+        "Dedicated VIP warranty support"
       ]
     },
     {

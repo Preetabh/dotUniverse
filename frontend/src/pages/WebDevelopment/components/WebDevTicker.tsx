@@ -3,10 +3,10 @@ import { Sparkles, Flame, Zap } from 'lucide-react';
 
 export const WebDevTicker: React.FC = () => {
   const discounts = [
-    { label: "Business Scale Matrix", wasPrice: "₹22,500", nowPrice: "₹16,499", off: "SAVE 27%", code: "PROMO::GROWTH" },
-    { label: "High-Speed Edge Cloud", wasPrice: "₹4,999", nowPrice: "₹3,999", off: "EDGE LAUNCH", code: "PROMO::EDGE" },
-    { label: "Managed Ops + 2hr Dev", wasPrice: "₹9,999", nowPrice: "₹7,999", off: "POPULAR", code: "PROMO::OPS" },
-    { label: "Bespoke Landing Page", wasPrice: "₹9,999", nowPrice: "₹6,499", off: "FLASH DEAL", code: "PROMO::LANDING" },
+    { label: "Bespoke Landing Page", wasPrice: "₹4,999", nowPrice: "₹999", off: "FLASH ₹999 DEAL", code: "PROMO::LANDING999" },
+    { label: "High-Speed Edge Cloud", wasPrice: "₹2,999", nowPrice: "₹999", off: "EDGE ₹999", code: "PROMO::EDGE999" },
+    { label: "Business Scale Matrix", wasPrice: "₹9,999", nowPrice: "₹1,999", off: "SAVE 80%", code: "PROMO::GROWTH" },
+    { label: "Managed Ops + 2hr Dev", wasPrice: "₹4,999", nowPrice: "₹1,999", off: "POPULAR", code: "PROMO::OPS" },
   ];
 
   const repeated = [...discounts, ...discounts, ...discounts, ...discounts];

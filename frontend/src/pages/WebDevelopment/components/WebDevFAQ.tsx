@@ -8,7 +8,7 @@ export const WebDevFAQ: React.FC = () => {
     {
       code: "FAQ::01",
       q: "How much does a new website cost?",
-      a: "Our pricing is transparent and modular — see our Landing, Business Scale, and Enterprise Custom packages above. Landing packages start at ₹6,499 ($79 USD), and Business Scale starts at ₹16,499 ($199 USD). Every engagement starts with a technical strategy audit to guarantee our proposal matches your exact business goals without unnecessary padding."
+      a: "Our pricing is transparent and modular — see our Landing, Business Scale, and Enterprise Custom packages above. Landing packages start at ₹999 ($12 USD), and Business Scale starts at ₹1,999 ($25 USD). Every engagement starts with a technical strategy audit to guarantee our proposal matches your exact business goals without unnecessary padding."
     },
     {
       code: "FAQ::02",

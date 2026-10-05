@@ -38,7 +38,7 @@ export const WebDevelopment: React.FC = () => {
         <WebDevHero />
 
         {/* 2. Client & Tech Trust Ticker */}
-        <BrandMarquee />
+        <BrandMarquee field="web-dev" />
 
         {/* 3. Core Capabilities & Performance Grid */}
         <WebDevFeatures />

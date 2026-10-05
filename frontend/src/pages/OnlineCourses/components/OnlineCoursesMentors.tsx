@@ -27,7 +27,7 @@ export const OnlineCoursesMentors: React.FC = () => {
       role: "SENIOR FULL-STACK ARCHITECT",
       bio: "Architecting cloud-native distributed microservices, Next.js 15 platforms, and real-time database clusters for dotUniverse global clients.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80",
-      linkedin: "https://www.linkedin.com/company/codexconquer",
+      linkedin: "https://www.linkedin.com/company/dotuniverse",
       accent: "#06b6d4",
       specialty: "Next.js 15, Redis, Microservices & Docker"
     }

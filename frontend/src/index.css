@@ -195,7 +195,7 @@ body {
 .animate-infinite-marquee {
   display: flex;
   width: max-content;
-  animation: marquee-anim 28s linear infinite;
+  animation: marquee-anim 48s linear infinite;
 }
 
 .animate-infinite-marquee:hover {

@@ -42,7 +42,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
       schedule: "Saturdays & Sundays (Live Sprints + Async Code Reviews)",
       level: "Intermediate to Pro",
       rating: "4.95 ★ (380+ Alums)",
-      basePriceINR: 24999,
+      basePriceINR: 999,
       icon: Code2,
       summary:
         "Learn how real software engineers build systems that handle millions of requests without crashing. You will build, test, containerize, and deploy production software.",
@@ -72,7 +72,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
       schedule: "Weekend Live Workshops + Daily Campaign Discord Reviews",
       level: "All Skill Levels",
       rating: "4.92 ★ (290+ Alums)",
-      basePriceINR: 19999,
+      basePriceINR: 999,
       icon: TrendingUp,
       summary:
         "Forget theory. You will be given actual client sandbox ad spend to run live campaigns on Meta Ads Manager and Google Ads under senior media buyer supervision.",
@@ -94,7 +94,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
     {
       id: "design-x",
       track: "design",
-      title: "DesignX: UI/UX & Tokenized Design Systems",
+      title: "Design Systems: UI/UX & High-Converting Products",
       subtitle: "Master High-Conversion Product Design, Spline 3D & Framer",
       badge: "Portfolio-Driven Atelier",
       accent: "#c8ff00",
@@ -102,7 +102,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
       schedule: "Live Interactive Critiques + 1-on-1 Portfolio Mentorship",
       level: "All Skill Levels",
       rating: "4.98 ★ (210+ Alums)",
-      basePriceINR: 14999,
+      basePriceINR: 999,
       icon: Palette,
       summary:
         "Build designs that earn respect and make hiring managers stop scrolling. You will build comprehensive design systems that hand off cleanly to developers.",
@@ -131,7 +131,7 @@ export const OnlineCoursesExplorer: React.FC<OnlineCoursesExplorerProps> = ({
       schedule: "Live Weekend Sprints + 24/7 AI Code Lab Access",
       level: "Intermediate Developer",
       rating: "4.94 ★ (160+ Alums)",
-      basePriceINR: 29999,
+      basePriceINR: 999,
       icon: Bot,
       summary:
         "The highest ROI skill of the decade. Learn to build autonomous agents that read PDFs, query databases, make API calls, and replace repetitive manual business workflows.",

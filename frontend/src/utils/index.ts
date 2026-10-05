@@ -1,5 +1,5 @@
 /**
- * Utility helper functions for CodexConquer
+ * Utility helper functions for dotuniverse
  */
 
 export function classNames(...classes: (string | boolean | undefined | null)[]): string {

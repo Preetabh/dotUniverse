@@ -41,7 +41,7 @@ export const DigitalMarketing: React.FC = () => {
         <DigitalMarketingStatsBar />
 
         {/* 3. Global Brand Trust Marquee */}
-        <BrandMarquee />
+        <BrandMarquee field="digital-marketing" />
 
         {/* 4. Multi-Channel Revenue Pillars */}
         <DigitalMarketingChannels />

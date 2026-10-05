@@ -41,7 +41,7 @@ export const AppDevelopment: React.FC = () => {
         <AppDevStatsBar />
 
         {/* 3. Global Brand Trust Marquee */}
-        <BrandMarquee />
+        <BrandMarquee field="app-dev" />
 
         {/* 4. Bespoke Mobile Architecture Pillars */}
         <AppDevArchitecture />
