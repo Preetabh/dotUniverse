@@ -39,66 +39,71 @@ export const CodexHero: React.FC = () => {
     <section
       id="hero"
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen pt-36 pb-24 flex flex-col justify-center items-center text-center overflow-hidden bg-[#030305]"
+      className="relative min-h-screen pt-36 pb-24 flex flex-col justify-center items-center text-center overflow-hidden bg-[#050508]"
     >
-      {/* 1. Interactive Cursor Light Spotlight */}
-      <div
-        className="absolute inset-0 pointer-events-none -z-10 transition-opacity duration-700"
-        style={{
-          background: `radial-gradient(850px circle at ${mousePos.x}% ${mousePos.y}%, rgba(200, 255, 0, 0.08) 0%, rgba(0, 240, 255, 0.04) 40%, transparent 80%)`,
-        }}
-      />
+      {/* ==============================================================
+          CLASSY COSMIC BACKGROUND SYSTEM (z-0 to ensure 100% visibility)
+         ============================================================== */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden select-none">
+        {/* 1. Interactive Cursor Light Spotlight */}
+        <div
+          className="absolute inset-0 transition-opacity duration-500"
+          style={{
+            background: `radial-gradient(800px circle at ${mousePos.x}% ${mousePos.y}%, rgba(200, 255, 0, 0.12) 0%, rgba(0, 240, 255, 0.08) 35%, transparent 70%)`,
+          }}
+        />
 
-      {/* 2. Top Luminous Beam / Keynote Spotlight */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1100px] h-[360px] bg-[radial-gradient(ellipse_at_top,rgba(200,255,0,0.18)_0%,rgba(0,240,255,0.08)_40%,transparent_75%)] pointer-events-none -z-10 blur-2xl" />
+        {/* 2. Keynote Luminous Top Light Cone */}
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] sm:w-[1000px] h-[450px] bg-[radial-gradient(ellipse_at_top,rgba(200,255,0,0.22)_0%,rgba(0,240,255,0.12)_35%,transparent_70%)] blur-3xl opacity-80" />
 
-      {/* 3. Deep Chromatic Aurora Nebulae */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] sm:w-[1100px] sm:h-[600px] bg-gradient-to-tr from-[#c8ff00]/15 via-[#00f0ff]/10 to-[#ec4899]/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-aurora-pulse" />
-      <div className="absolute -top-24 right-[-10%] w-[500px] h-[500px] bg-[#00f0ff]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 left-[-10%] w-[550px] h-[550px] bg-[#ec4899]/10 rounded-full blur-[150px] pointer-events-none -z-10" />
+        {/* 3. Deep Chromatic Aurora Nebulae (Vibrant & Luxurious) */}
+        <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] sm:w-[1100px] sm:h-[650px] bg-gradient-to-tr from-[#c8ff00]/20 via-[#00f0ff]/15 to-[#ec4899]/20 rounded-full blur-[120px] animate-aurora-pulse" />
+        <div className="absolute -top-10 -right-20 w-[450px] h-[450px] bg-[#00f0ff]/15 rounded-full blur-[130px]" />
+        <div className="absolute bottom-10 -left-20 w-[500px] h-[500px] bg-[#ec4899]/15 rounded-full blur-[140px]" />
 
-      {/* 4. 3D Cosmic Orbital Plane (dotUniverse Signature System) */}
-      <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[850px] sm:w-[1150px] sm:h-[1150px] lg:w-[1300px] lg:h-[1300px] pointer-events-none -z-10 [transform:perspective(1200px)_rotateX(68deg)] opacity-70">
-        {/* Outer dashed celestial track */}
-        <div className="absolute inset-0 rounded-full border border-white/[0.08] border-dashed animate-cosmic-orbit" />
-        
-        {/* Middle illuminated orbit ring with the orbiting "dotUniverse" celestial node */}
-        <div className="absolute inset-[15%] rounded-full border border-[#c8ff00]/30 shadow-[0_0_50px_rgba(200,255,0,0.15),inset_0_0_30px_rgba(200,255,0,0.05)] animate-cosmic-orbit-reverse">
-          {/* Neon Lime Orbiting Planet Dot */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#c8ff00] shadow-[0_0_25px_#c8ff00,0_0_50px_rgba(200,255,0,0.8)] border border-white" />
+        {/* 4. 3D Cosmic Orbital Plane (dotUniverse Signature System) */}
+        <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] sm:w-[1100px] sm:h-[1100px] lg:w-[1250px] lg:h-[1250px] [transform:perspective(1200px)_rotateX(68deg)] opacity-85">
+          {/* Outer dashed celestial track */}
+          <div className="absolute inset-0 rounded-full border border-white/15 border-dashed animate-cosmic-orbit" />
           
-          {/* Cyber Cyan Counter-Satellite */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-2.5 h-2.5 rounded-full bg-[#00f0ff] shadow-[0_0_20px_#00f0ff]" />
+          {/* Middle illuminated orbit ring with the orbiting "dotUniverse" celestial node */}
+          <div className="absolute inset-[15%] rounded-full border border-[#c8ff00]/40 shadow-[0_0_60px_rgba(200,255,0,0.2),inset_0_0_40px_rgba(200,255,0,0.08)] animate-cosmic-orbit-reverse">
+            {/* Neon Lime Orbiting Planet Dot */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#c8ff00] shadow-[0_0_20px_#c8ff00,0_0_45px_rgba(200,255,0,0.9)] border-2 border-white" />
+            
+            {/* Cyber Cyan Counter-Satellite */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-3 h-3 rounded-full bg-[#00f0ff] shadow-[0_0_20px_#00f0ff] border border-white" />
+          </div>
+
+          {/* Inner core horizon ring */}
+          <div className="absolute inset-[32%] rounded-full border border-[#00f0ff]/30 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.08)_0%,transparent_70%)] shadow-[inset_0_0_40px_rgba(0,240,255,0.15)]" />
+
+          {/* Center gravitational core pulse */}
+          <div className="absolute inset-[46%] rounded-full border border-white/20 bg-[#c8ff00]/10 animate-ping" style={{ animationDuration: '6s' }} />
         </div>
 
-        {/* Inner core horizon ring */}
-        <div className="absolute inset-[32%] rounded-full border border-[#00f0ff]/20 bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.06)_0%,transparent_70%)] shadow-[inset_0_0_40px_rgba(0,240,255,0.1)]" />
+        {/* 5. Twinkling Stardust Constellation Field */}
+        <div className="absolute inset-0 overflow-hidden">
+          {CELESTIAL_STARS.map((star, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full animate-stardust"
+              style={{
+                top: star.top,
+                left: star.left,
+                width: `${star.size}px`,
+                height: `${star.size}px`,
+                backgroundColor: star.color,
+                boxShadow: `0 0 ${star.size * 6}px ${star.color}, 0 0 ${star.size * 12}px ${star.color}`,
+                animationDelay: star.delay,
+              }}
+            />
+          ))}
+        </div>
 
-        {/* Center gravitational core pulse */}
-        <div className="absolute inset-[46%] rounded-full border border-white/15 bg-[#c8ff00]/5 animate-ping" style={{ animationDuration: '6s' }} />
+        {/* 6. Technical Precision Grid with Smooth Vignette */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_45%,#000_60%,transparent_100%)] opacity-70" />
       </div>
-
-      {/* 5. Twinkling Stardust Field */}
-      <div className="absolute inset-0 pointer-events-none -z-10 overflow-hidden">
-        {CELESTIAL_STARS.map((star, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full animate-stardust"
-            style={{
-              top: star.top,
-              left: star.left,
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-              backgroundColor: star.color,
-              boxShadow: `0 0 ${star.size * 4}px ${star.color}`,
-              animationDelay: star.delay,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* 6. Technical Precision Grid with Smooth Elliptical Vignette */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:4.5rem_4.5rem] [mask-image:radial-gradient(ellipse_65%_55%_at_50%_45%,#000_65%,transparent_100%)] pointer-events-none -z-10" />
 
       {/* Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center relative z-10">
