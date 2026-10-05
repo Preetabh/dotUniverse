@@ -1,6 +1,6 @@
 import React from 'react';
 import { Logo } from '../Logo/Logo';
-import { Mail, Phone, MapPin, ArrowUp, Heart } from 'lucide-react';
+import { Mail, MessageSquare, MapPin, ArrowUp, Heart } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -139,9 +139,9 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#00f0ff]" />
-                <a href="tel:+919999999999" className="hover:text-white transition-colors">
-                  +91 (Direct Founder Line)
+                <MessageSquare className="w-4 h-4 text-[#00f0ff]" />
+                <a href="mailto:contact@dotuniverse.io?subject=Project%20Consultation%20Inquiry" className="hover:text-white transition-colors">
+                  Book a Consultation
                 </a>
               </li>
               <li className="flex items-start gap-2.5">

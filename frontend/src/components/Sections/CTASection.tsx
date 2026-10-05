@@ -1,6 +1,6 @@
 import React from 'react';
 import { CTAButton } from '../Buttons/CTAButton';
-import { ArrowRight, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Mail, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const CTASection: React.FC = () => {
   return (
@@ -35,13 +35,11 @@ export const CTASection: React.FC = () => {
             </CTAButton>
 
             <a
-              href="https://wa.me/919999999999"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:contact@dotuniverse.io?subject=Direct%20Project%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white text-base font-bold uppercase tracking-wider transition-all"
             >
-              <MessageCircle className="w-5 h-5 text-[#25D366]" />
-              <span>Chat on WhatsApp</span>
+              <Mail className="w-5 h-5 text-[#00f0ff]" />
+              <span>Email Us Directly</span>
             </a>
           </div>
 

@@ -1,67 +1,24 @@
 import React, { useState } from 'react';
-import {
-  Smartphone,
-  ExternalLink,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Shield,
-  Star,
-  CheckCircle,
-  Zap
-} from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
+import { PORTFOLIO_PROJECTS } from '../../../constants';
 
 export const AppDevShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
-  const projects = [
-    {
-      title: "Aura Private Wealth Vault",
-      domain: "Fintech & Sovereign Custody",
-      platform: "iOS & iPadOS Native (SwiftUI)",
-      rating: "5.0 ★ App Store",
-      tagline: "Next-generation private banking interface with zero-knowledge hardware biometric security.",
-      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1000&auto=format&fit=crop&q=80",
-      stats: "$180M+ Transacted",
-      tech: ["SwiftUI", "Secure Enclave", "Metal Shaders", "WebSockets"],
-      impact: "Seamless institutional vault management for high-net-worth investors across London and Zurich."
-    },
-    {
-      title: "Maison Royale Atelier",
-      domain: "Haute Horlogerie & Fashion",
-      platform: "Cross-Platform (Flutter Engine)",
-      rating: "4.9 ★ Global Average",
-      tagline: "Ultra-luxury shopping portal featuring 3D interactive model previews and 1-click private concierge checkout.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000&auto=format&fit=crop&q=80",
-      stats: "3.8x VIP Sales Conversion",
-      tech: ["Flutter 3.22", "ARKit 3D", "Stripe Private", "Firebase"],
-      impact: "Zero drop-off checkout experience serving exclusive boutique patrons in Dubai, Milan, and Paris."
-    },
-    {
-      title: "Veloce Aero & Marine Club",
-      domain: "Private Jet & Yacht Concierge",
-      platform: "Native iOS & Android",
-      rating: "5.0 ★ Invitation-Only",
-      tagline: "Autonomous flight booking, live manifest tracking, and synchronized Rolls Royce tarmac pickup.",
-      image: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1000&auto=format&fit=crop&q=80",
-      stats: "Under 60s Booking SLA",
-      tech: ["Kotlin", "Swift", "Live Telemetry", "Radar API"],
-      impact: "Instant jet dispatch and FBO fast-track clearance for 2,500+ verified private aviation members."
-    },
-    {
-      title: "Solstice BioSync Health",
-      domain: "Longevity & Biometric Tracking",
-      platform: "iOS & watchOS Native",
-      rating: "4.9 ★ Health & Fitness",
-      tagline: "Realtime cardiovascular telemetry, sleep architecture coaching, and continuous glucose tracking.",
-      image: "https://images.unsplash.com/photo-1510519138171-c70d7634f02c?w=1000&auto=format&fit=crop&q=80",
-      stats: "120K Daily Active Users",
-      tech: ["HealthKit", "watchOS Complications", "CoreML", "SQLite"],
-      impact: "Predictive metabolic recommendations with zero background battery drain on Apple Watch Ultra."
-    }
-  ];
+  const projects = PORTFOLIO_PROJECTS.map((p) => ({
+    title: p.title,
+    domain: p.category,
+    platform: p.category.includes("App") ? "iOS & Android (Flutter / Native)" : "Responsive Web & Progressive Web App",
+    rating: p.stats.includes("★") ? p.stats : "5.0 ★ Client Rating",
+    tagline: p.result,
+    image: p.image,
+    stats: p.stats,
+    tech: p.tags,
+    badge: p.badge,
+    impact: `Delivered by dotUniverse: ${p.result}.`
+  }));
 
-  const current = projects[activeTab];
+  const current = projects[activeTab] || projects[0];
 
   return (
     <section id="portfolio" className="relative py-28 sm:py-36 overflow-hidden border-t border-[#D4AF37]/20 bg-black/90">
@@ -71,17 +28,16 @@ export const AppDevShowcase: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/35 text-[#F5D061] font-mono text-xs font-bold uppercase tracking-wider mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>[ THE FLAGSHIP GALLERY ]</span>
+            <span>[ PROVEN WORK GALLERY ]</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight font-sans">
-            Curated Prestige <br />
-            <span className="gold-gradient-text font-serif italic glow-gold">Case Studies</span>
+            Client Success &amp; <br />
+            <span className="gold-gradient-text font-serif italic glow-gold">Featured Case Studies</span>
           </h2>
 
           <p className="mt-6 text-white/70 text-base sm:text-lg">
-            Inspect our proudest mobile engineering feats. Engineered for brands that demand perfection
-            down to the microsecond.
+            Real projects delivered for active clients worldwide, engineered with uncompromising attention to speed and detail.
           </p>
 
           {/* Interactive Project Switcher */}
@@ -97,13 +53,13 @@ export const AppDevShowcase: React.FC = () => {
                     : 'bg-white/5 text-white/70 border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 hover:text-white'
                 }`}
               >
-                {p.title.split(' ')[0]}
+                {p.title}
               </button>
             ))}
           </div>
         </div>
 
-        {/* Active Project Luxury Feature Showcase Card */}
+        {/* Active Project Feature Showcase Card */}
         <div className="luxury-glass-card rounded-3xl p-6 sm:p-12 relative overflow-hidden border border-[#D4AF37]/30">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
             {/* Visual Screen Preview */}
@@ -174,7 +130,7 @@ export const AppDevShowcase: React.FC = () => {
                   href="#vip-commission"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full gold-btn text-black font-mono text-xs font-bold uppercase tracking-wider shadow-lg"
                 >
-                  <span>Inquire Similar App</span>
+                  <span>Commission Project</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>

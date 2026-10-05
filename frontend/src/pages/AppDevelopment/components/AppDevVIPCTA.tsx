@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Crown, CheckCircle2, MessageSquare, ShieldCheck, Sparkles, Lock } from 'lucide-react';
+import { ArrowRight, Crown, CheckCircle2, Mail, ShieldCheck, Sparkles, Lock } from 'lucide-react';
 
 export const AppDevVIPCTA: React.FC = () => {
   return (
@@ -39,13 +39,11 @@ export const AppDevVIPCTA: React.FC = () => {
             </a>
 
             <a
-              href="https://wa.me/919999999999?text=Hello%20dotUniverse,%20I%20would%20like%20to%20inquire%20about%20a%20Bespoke%20App%20Development%20Commission."
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:contact@dotuniverse.io?subject=App%20Development%20Bespoke%20Commission%20Inquiry"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-[#D4AF37]/35 bg-white/5 hover:bg-[#D4AF37]/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#D4AF37] hover:text-[#F5D061] cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4 text-[#25D366]" />
-              <span>Direct WhatsApp Concierge</span>
+              <Mail className="w-4 h-4 text-[#F5D061]" />
+              <span>Direct Atelier Inquiry</span>
             </a>
           </div>
 

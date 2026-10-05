@@ -1,6 +1,6 @@
 import React from 'react';
 import { CTAButton } from '../../../components/Buttons/CTAButton';
-import { ArrowRight, Sparkles, CheckCircle2, MessageSquare, Shield, Rocket, Flame } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2, Mail, Shield, Rocket, Flame } from 'lucide-react';
 
 export const WebDevCTA: React.FC = () => {
   return (
@@ -48,13 +48,11 @@ export const WebDevCTA: React.FC = () => {
             </CTAButton>
 
             <a
-              href="https://wa.me/919999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#25D366] hover:text-[#25D366] cursor-pointer"
+              href="mailto:contact@dotuniverse.io?subject=Web%20Development%20Project%20Inquiry"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-white font-mono text-sm uppercase tracking-wider transition-all hover:border-[#c8ff00] hover:text-[#c8ff00] cursor-pointer"
             >
-              <MessageSquare className="w-4 h-4 text-[#25D366]" />
-              <span>Instant WhatsApp Chat</span>
+              <Mail className="w-4 h-4 text-[#c8ff00]" />
+              <span>Direct Project Inquiry</span>
             </a>
           </div>
 
